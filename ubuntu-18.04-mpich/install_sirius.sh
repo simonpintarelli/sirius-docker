@@ -18,6 +18,6 @@ git clone --recursive https://github.com/simonpintarelli/SIRIUS.git -b python27_
                   ../
             make install && rm -rf build && \
                 echo "Installed SIRIUS binaries to /usr/local/bin"
-            echo "TODO set PYTHONPATH"
+            echo 'export PYTHONPATH=/usr/local/lib/python3.6/site-packages:${PYTHONPATH}' >> /etc/bash.bashrc
         )
 )
