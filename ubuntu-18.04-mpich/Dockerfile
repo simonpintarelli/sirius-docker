@@ -9,25 +9,18 @@ RUN apt-get update && apt-get install -y \
   autoconf \
   pkg-config \
   gfortran \
-  python-dev \
   python3-dev \
   liblapack-dev \
   libfftw3-dev \
   libmpich-dev \
-  python-dill \
   python3-dill \
-  python-pip \
   python3-pip \
-  python-numpy \
   python3-numpy \
-  python-distutils-extra \
   python3-distutils-extra \
-  python-setuptools \
   python3-setuptools \
   m4 \
   libtool \
   mpich \
-  python \
   python3 \
   wget \
   cmake \
@@ -46,7 +39,6 @@ RUN apt-get update && apt-get install -y \
 
 # install mpi4py via pip, since official ubuntu packages are only for openmpi
 RUN pip3 install mpi4py
-RUN pip2 install mpi4py
 
 # build toolchain
 WORKDIR /opt/sirius/
