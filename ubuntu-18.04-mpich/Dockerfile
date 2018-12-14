@@ -9,10 +9,11 @@ RUN apt-get update && apt-get install -y \
   autoconf \
   pkg-config \
   gfortran \
-  python3-dev \
   liblapack-dev \
   libfftw3-dev \
   libmpich-dev \
+  python3 \
+  python3-dev \
   python3-dill \
   python3-pip \
   python3-numpy \
@@ -21,7 +22,6 @@ RUN apt-get update && apt-get install -y \
   m4 \
   libtool \
   mpich \
-  python3 \
   wget \
   cmake \
   cmake-data \

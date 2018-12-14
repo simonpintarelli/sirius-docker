@@ -10,7 +10,7 @@ git clone --recursive https://github.com/simonpintarelli/SIRIUS.git -b python27_
     mkdir -p build && \
         (
             # make sure SIRIUS finds SPG, other libs are in standard path
-            export LIBSPGROOT=/opt/sirius/SIRIUS/external
+            export LIBSPGROOT=/opt/SIRIUS/external
 
             cd build
             cmake -DCMAKE_BUILD_TYPE=Release \
@@ -22,3 +22,5 @@ git clone --recursive https://github.com/simonpintarelli/SIRIUS.git -b python27_
             echo 'export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}' >> /etc/bash.bashrc
         )
 )
+
+git clone https://github.com/simonpintarelli/i-pi.git i-pi -b feat/sirius
