@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
   python-numpy \
   python-distutils-extra \
   python-setuptools \
+  vim \
   m4 \
   libtool \
   mpich \

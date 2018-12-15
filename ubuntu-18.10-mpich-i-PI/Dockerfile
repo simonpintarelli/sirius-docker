@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
   python-distutils-extra \
   python-setuptools \
   m4 \
+  vim \
   libtool \
   mpich \
   wget \
