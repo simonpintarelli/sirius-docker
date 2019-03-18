@@ -11,7 +11,7 @@ git clone --recursive https://github.com/simonpintarelli/SIRIUS.git -b feature/b
         (
             # make sure SIRIUS finds SPG, other libs are in standard path
             export LIBSPGROOT=/opt/SIRIUS/external
-
+            export PYTHON_EXECUTABLE=python3
             cd build
             cmake -DCMAKE_BUILD_TYPE=Release \
                   -DCREATE_PYTHON_MODULE=On \

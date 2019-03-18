@@ -43,7 +43,6 @@ COPY install_sirius.sh ./
 
 COPY etc_profile_sirius.sh /etc/profile.d/00-sirius.sh
 RUN echo "source /etc/profile.d/00-sirius.sh" >> /etc/bash.bashrc
-RUN echo "source /opt/i-pi/env.sh" >> /etc/bash.bashrc
 RUN ./install_sirius.sh
 
 WORKDIR /opt/sirius
