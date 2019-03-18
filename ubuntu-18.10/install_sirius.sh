@@ -4,7 +4,7 @@ git clone --recursive https://github.com/simonpintarelli/SIRIUS.git -b feature/b
 (
     cd SIRIUS
     mkdir -p external && \
-        python prerequisite.py $(realpath external) spg
+        python3 prerequisite.py $(realpath external) spg
 
 
     mkdir -p build && \
