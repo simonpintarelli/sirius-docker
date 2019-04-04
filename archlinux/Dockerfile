@@ -11,11 +11,12 @@ USER user
 RUN mkdir -p /tmp/install && cd /tmp/install  && \
   git clone https://aur.archlinux.org/pikaur.git && cd pikaur && makepkg -fsri --noconfirm
 RUN pikaur --aur -Sy --noconfirm libxc spglib-git python-spglib scalapack openblas-lapack
-RUN pikaur -Sy --noconfirm gcc-fortran cmake
+RUN pikaur -Sy --noconfirm gcc-fortran cmake ipython jupyter
 
 USER user
 RUN mkdir -p /tmp/sirius
 COPY --chown=user sirius-pkgbuild/PKGBUILD /tmp/sirius/
 RUN cd /tmp/sirius && makepkg -fsri --noconfirm
 
-RUN echo 'export PYTHONPATH=/usr/local/lib/python3.7/site-packages:${PYTHONPATH}' >> /etc/profile.d/sirius-env
+USER root
+ENV PYTHONPATH=/usr/local/lib/python3.7/site-packages
